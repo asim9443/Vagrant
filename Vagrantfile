@@ -14,8 +14,8 @@ Vagrant.configure("2") do |config|
     nxp.vm.provision "shell", path:"./install-nginx.sh"
       nxp.vm.provider "virtualbox" do |vb|
         vb.name = "nginx-proxy"
-        vb.memory = "1024"
-        vb.cpus = 1
+        vb.memory = "2048"
+        vb.cpus = 2
         vb.gui = true 
       end    
   end
@@ -28,8 +28,8 @@ Vagrant.configure("2") do |config|
       blue.vm.provision "shell", path:"./install-docker.sh"
         blue.vm.provider "virtualbox" do |vb|
           vb.name = "blue-environment"
-          vb.memory = "1024"
-          vb.cpus = 1
+          vb.memory = "2048"
+          vb.cpus = 2
           vb.gui = true 
       end    
   end
@@ -42,8 +42,8 @@ Vagrant.configure("2") do |config|
       green.vm.provision "shell", path:"./install-docker.sh"
         green.vm.provider "virtualbox" do |vb|
           vb.name = "green-environment"
-          vb.memory = "1024"
-          vb.cpus = 1
+          vb.memory = "2048"
+          vb.cpus = 2
           vb.gui = true 
       end    
   end
